@@ -9,7 +9,7 @@
       <!-- Brand -->
       <div>
         <a class="inline-flex items-center gap-2.5" href="#beranda" @click.prevent="scrollToSection('#beranda')">
-          <img src="/favicon.svg" alt="" width="48" height="46" class="h-10 w-auto" />
+          <img src="/icon.svg" alt="" width="48" height="46" class="h-10 w-auto" />
           <strong class="text-sm text-white">Tangan Mungil Bidan</strong>
         </a>
         <p class="mt-4 max-w-[300px] text-xs leading-[1.7] text-[#ffecef]/70">Perawatan privat ibu dan bayi di rumah, dengan percakapan yang jelas sebelum setiap sesi.</p>

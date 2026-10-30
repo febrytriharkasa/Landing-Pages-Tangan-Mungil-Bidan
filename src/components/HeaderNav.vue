@@ -10,7 +10,7 @@
         @click.prevent="scrollToSection('#beranda')"
       >
         <img
-          src="/favicon.svg"
+          src="/icon.svg"
           alt=""
           width="48"
           height="46"
@@ -84,6 +84,7 @@ const menuOpen = ref(false)
 const links = [
   { id: 'beranda', label: 'Beranda' },
   { id: 'tentang', label: 'Tentang kami' },
+  { id: 'alasan', label: 'Keunggulan' },
   { id: 'layanan', label: 'Layanan' },
   { id: 'cerita', label: 'Cerita pelanggan' },
   { id: 'contact', label: 'Kontak' },
