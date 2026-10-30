@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* Token dari DESIGN (3).md: berry/blush/ink, Plus Jakarta Sans */
+@theme {
+  --font-sans: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
+
+  --color-blush: #fff8f8;
+  --color-blush-deep: #fff0f2;
+  --color-berry: #b0004a;
+  --color-berry-bright: #d81b60;
+  --color-berry-dark: #820038;
+  --color-ink: #30121b;
+  --color-muted: #5a4044;
+  --color-line: #e3bdc3;
+  --color-sage: #12661e;
+  --color-sage-bg: #e8f5e9;
+
+  /* titik patah isi: layout berubah di 620px dan 900px */
+  --breakpoint-sm: 620px;
+  --breakpoint-lg: 900px;
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    min-width: 320px;
+    background: var(--color-blush);
+    color: var(--color-ink);
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  a, button, select, input, label[for] { cursor: pointer; }
+  button:disabled, select:disabled, input:disabled { cursor: not-allowed; }
+  button, a, select, input { -webkit-tap-highlight-color: transparent; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+  :focus-visible { outline: 3px solid #ffb2bf; outline-offset: 3px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}
