@@ -1,8 +1,8 @@
 <template>
   <section id="beranda" class="relative isolate flex min-h-[720px] items-center overflow-hidden max-sm:min-h-[680px] max-sm:items-end">
     <img
-      class="absolute inset-0 -z-20 size-full object-cover object-[center_42%] max-sm:object-[59%_center]"
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuDe4qlXgzgA5E6Wt9uaox96lWzybLwV8uEskVCX-UrFLO79gy0aIYCV-n9fySNg7SfVOr3H-stPuLab5Wq3uBASLzRkE_5CQZ2NRehyVmTsXqJ9Ahp99Le1BGxJKmphZu9SHBmbxxaFT-yaTaGO67LpZ5TI7-rd_qsqsB4HYI7VGccz2-N5kiQC_xE0v0c4R3yuiK6mlEnGYXlgPzdhz8DrAmS5Cov4ra4-NgtOPt0"
+      class="absolute inset-0 -z-20 size-full object-cover object-[center_5%] max-sm:object-[62%_35%]"
+      src="/bgHero.webp"
       alt="Ibu dan bayi menikmati perawatan di rumah"
       width="1600"
       height="980"

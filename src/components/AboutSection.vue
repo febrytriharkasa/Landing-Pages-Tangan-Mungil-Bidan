@@ -10,7 +10,7 @@
         <div class="size-[min(400px,100%)] overflow-hidden rounded-[32px] max-sm:rounded-3xl">
           <img
             class="size-full aspect-square object-cover"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCABo548vwuYxFCKilPaHyhjG2CpsFsJG-BktvWmrvN702Se_HO4MGo586xJwnTq2eML_GEyN1p3c0E5qwo5A1yoh0Y9VWVzsHVgSZTGfVpFi8gCY__Oxj7aDHwVXEXLKmbbpdOndzmJqrND_FhwKWAo9SbwRxrQHebm0a5eyB_ar2k9AIJ8pfu_jzH57xJNBQK9cWDtRmOtfFw3ymX6qatFzSCMzUAtkCILlpk1fM"
+            src="/aboutImg.webp"
             alt="Bidan merawat bayi dengan sentuhan lembut"
             width="760"
             height="760"

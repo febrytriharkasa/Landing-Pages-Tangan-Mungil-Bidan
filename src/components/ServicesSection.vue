@@ -27,9 +27,9 @@
               </svg>
             </div>
             <!-- label datar: featured dan biasa sama-sama teks kecil, tanpa kapsul khusus (R-09) -->
-            <span class="absolute top-4 left-4 text-[9px] font-bold tracking-wider uppercase text-berry"
+            <!-- <span class="absolute top-4 left-4 text-[9px] font-bold tracking-wider uppercase text-berry"
               >{{ service.label }}</span
-            >
+            > -->
           </div>
 
           <div class="flex flex-1 flex-col p-4">
@@ -75,7 +75,7 @@ const services = [
     title: 'Pijat Hamil & Postpartum',
     label: 'Untuk ibu',
     description: 'Sesi relaksasi yang disesuaikan dengan kondisi ibu hamil dan masa pemulihan setelah melahirkan.',
-    image: '',
+    image: '/paket/paket1.webp',
     alt: 'Bidan memberikan perawatan lembut untuk ibu',
     points: ['Anamnesis singkat sebelum sesi', 'Teknik pijat sesuai kebutuhan ibu', 'Sesi privat di rumah'],
     price: 'Rp250.000',
@@ -85,7 +85,7 @@ const services = [
     title: 'Baby Spa & Massage',
     label: 'Untuk bayi',
     description: 'Perawatan lembut untuk membantu bayi merasa nyaman bersama orang yang merawatnya di rumah.',
-    image: '',
+    image: '/paket/paket2.webp',
     alt: 'Bidan melakukan perawatan bayi dengan lembut',
     points: ['Observasi kenyamanan bayi', 'Sentuhan lembut sesuai respons bayi', 'Edukasi sederhana untuk orang tua'],
     price: 'Rp180.000',
@@ -95,7 +95,7 @@ const services = [
     title: 'Paket Combo Bunda & Bayi',
     label: 'Sesi keluarga',
     description: 'Satu kunjungan untuk ibu dan bayi, dengan alur perawatan yang dibicarakan sebelum sesi dimulai.',
-    image: '',
+    image: '/paket/paket3.webp',
     alt: 'Ibu dan bayi menikmati sesi perawatan di rumah',
     points: ['Urutan sesi disepakati bersama', 'Peralatan dibawa ke rumah', 'Cocok untuk waktu keluarga'],
     price: 'Rp395.000',

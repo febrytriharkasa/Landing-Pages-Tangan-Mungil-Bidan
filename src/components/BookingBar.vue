@@ -3,34 +3,34 @@
     <div
       class="mx-auto w-[min(1180px,calc(100%-48px))] max-w-[1180px] rounded-[28px] border border-[#f8d8df] bg-white p-5 pb-3.5 max-sm:w-[min(100%-32px,1180px)] max-sm:rounded-3xl max-sm:p-4 max-sm:pb-3"
     >
-      <div class="booking-intro">
+      <!-- <div class="booking-intro">
         <h2 id="booking-title" class="text-xl font-bold leading-snug tracking-[-0.03em] text-ink">
           Mulai dari jadwal yang nyaman
         </h2>
-      </div>
-      <form class="mt-4 grid grid-cols-[1.1fr_1fr_1fr_auto] items-end gap-2.5 max-lg:grid-cols-3 max-sm:grid-cols-1 max-sm:gap-0" @submit.prevent="submitBooking">
-        <div class="min-w-0 px-3 max-sm:border-b max-sm:border-[#f0dfe2] max-sm:py-3 max-sm:px-2">
+      </div> -->
+      <form class="mt-4 grid grid-cols-[1.1fr_1fr_1fr_auto] items-end gap-2.5 max-lg:grid-cols-3 max-sm:mt-2 max-sm:grid-cols-1 max-sm:gap-0" @submit.prevent="submitBooking">
+        <div class="min-w-0 px-3 max-sm:border-b max-sm:border-[#f0dfe2] max-sm:py-2.5 max-sm:px-2">
           <label for="service" class="mb-1.5 block text-[10px] font-bold tracking-[0.06em] text-berry uppercase">
             Pilih layanan
           </label>
-          <select id="service" v-model="selectedService" class="min-h-[44px] w-full border-0 bg-transparent text-[13px] font-semibold text-ink focus:outline-none">
+          <select id="service" v-model="selectedService" class="max-w-full min-h-[44px] w-full border-0 bg-transparent text-[13px] font-semibold text-ink focus:outline-none max-sm:min-h-[38px] max-sm:text-xs">
             <option>Baby Spa &amp; Gentle Massage</option>
             <option>Pijat Hamil &amp; Postpartum</option>
             <option>Paket Combo Bunda &amp; Bayi</option>
           </select>
         </div>
-        <div class="min-w-0 border-l border-[#f0dfe2] px-3 max-sm:border-t-0 max-sm:border-b max-sm:border-l-0 max-sm:py-3 max-sm:px-2">
+        <div class="min-w-0 border-l border-[#f0dfe2] px-3 max-sm:border-t-0 max-sm:border-b max-sm:border-l-0 max-sm:py-2.5 max-sm:px-2">
           <label for="location" class="mb-1.5 block text-[10px] font-bold tracking-[0.06em] text-berry uppercase">
             Wilayah
           </label>
-          <select id="location" v-model="selectedLocation" class="min-h-[44px] w-full border-0 bg-transparent text-[13px] font-semibold text-ink focus:outline-none">
+          <select id="location" v-model="selectedLocation" class="max-w-full min-h-[44px] w-full border-0 bg-transparent text-[13px] font-semibold text-ink focus:outline-none max-sm:min-h-[38px] max-sm:text-xs">
             <option>Sidoarjo &amp; sekitarnya</option>
             <option>Surabaya</option>
             <option>Mojokerto</option>
             <option>Gresik</option>
           </select>
         </div>
-        <div class="min-w-0 border-l border-[#f0dfe2] px-3 max-sm:border-t-0 max-sm:border-b max-sm:border-l-0 max-sm:py-3 max-sm:px-2">
+        <div class="min-w-0 border-l border-[#f0dfe2] px-3 max-sm:border-t-0 max-sm:border-b max-sm:border-l-0 max-sm:py-2.5 max-sm:px-2">
           <label for="visit-date" class="mb-1.5 block text-[10px] font-bold tracking-[0.06em] text-berry uppercase">
             Tanggal kunjungan
           </label>
@@ -39,7 +39,7 @@
             v-model="selectedDate"
             type="date"
             :max="maxDate"
-            class="min-h-[44px] w-full border-0 bg-transparent text-[13px] font-semibold text-ink focus:outline-none"
+            class="max-w-full min-h-[44px] w-full border-0 bg-transparent text-[13px] font-semibold text-ink focus:outline-none max-sm:min-h-[38px] max-sm:text-xs"
           />
         </div>
         <button
