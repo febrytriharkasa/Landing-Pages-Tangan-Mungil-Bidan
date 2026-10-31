@@ -5,7 +5,7 @@
       aria-label="Navigasi utama"
     >
       <a
-        class="inline-flex min-w-max items-center gap-2.5"
+        class="inline-flex min-w-max items-center gap-2.5 py-1"
         href="#beranda"
         @click.prevent="scrollToSection('#beranda')"
       >

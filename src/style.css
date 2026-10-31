@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 /* Token dari DESIGN (3).md: berry/blush/ink, Plus Jakarta Sans */
@@ -36,7 +35,7 @@
   button, a, select, input { -webkit-tap-highlight-color: transparent; }
   a { color: inherit; text-decoration: none; }
   img { display: block; max-width: 100%; }
-  :focus-visible { outline: 3px solid #ffb2bf; outline-offset: 3px; }
+  :focus-visible { outline: 3px solid #a0004f; outline-offset: 3px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

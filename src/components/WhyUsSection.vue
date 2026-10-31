@@ -1,5 +1,5 @@
 <template>
-  <section id="alasan" class="scroll-mt-24 bg-white py-[108px] max-sm:py-[76px]" aria-labelledby="why-title">
+  <section id="alasan" class="scroll-mt-24 bg-white py-[108px] pb-[132px] max-sm:py-[76px] max-sm:pb-[232px]" aria-labelledby="why-title">
     <div class="mx-auto w-[min(1180px,calc(100%-48px))] max-w-[1180px] max-sm:w-[min(100%-32px,1180px)]">
       <div class="mb-9 text-center">
         <h2 id="why-title" class="mx-auto max-w-[610px] text-[clamp(2rem,4vw,3rem)] font-bold leading-[1.13] tracking-[-0.045em] text-ink">
@@ -7,12 +7,7 @@
         </h2>
       </div>
 
-      <div
-        class="mx-auto max-w-[720px] space-y-4 text-center"
-        v-motion
-        :initial="{ opacity: 0, y: 16 }"
-        :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 520 } }"
-      >
+      <div class="mx-auto max-w-[720px] space-y-4 text-center">
         <p class="text-sm leading-[1.8] text-muted">
           Tangan Mungil Bidan berfokus pada perawatan ibu dan bayi yang dilakukan langsung di rumah. Bayi tetap berada di lingkungan yang dikenal, ibu tidak perlu menyiapkan transportasi, dan seluruh sesi berlangsung privat untuk satu keluarga.
         </p>
@@ -88,7 +83,7 @@
       </div>
 
       <!-- ponytail: strip jaminan berisi klaim izin/produk; verifikasi ke bidan sebelum dipublikasikan -->
-      <ul class="mt-4 flex flex-wrap items-center justify-center gap-x-12 gap-y-3 rounded-full border border-line bg-[#fbf2f4] px-8 py-5 max-sm:gap-x-6 max-sm:gap-y-2 max-sm:px-5">
+      <ul class="mt-4 flex flex-wrap items-center justify-center gap-x-12 gap-y-3 rounded-full border border-line bg-[#fbf2f4] px-8 py-5 max-sm:flex-col max-sm:items-start max-sm:gap-y-2 max-sm:rounded-[24px] max-sm:px-5">
         <li
           v-for="badge in badges"
           :key="badge"
@@ -107,7 +102,7 @@ import { onBeforeUnmount, onMounted, ref } from 'vue'
 
 /* ponytail: daftar alat menunggu konfirmasi bidan; jangan tambah klaim sterilisasi sebelum SOP tertulis */
 const badges = [
-  'Bidan Memiliki Izin Praktik SIPB Aktif',
+  'Bidan Memiliki Pengalaman Luas',
   'Bebas Biaya Transport S&K Berlaku',
   '100% Produk Halal & BPOM Certified',
 ]

@@ -16,17 +16,20 @@
           :key="service.title"
           class="flex flex-col overflow-hidden rounded-2xl border border-line bg-white transition-all"
           :class="service.featured ? 'border-berry-bright' : ''"
-          v-motion
-          :initial="{ opacity: 0, y: 16 }"
-          :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 480 } }"
         >
           <!-- Gambar dengan tinggi terbatas agar muat satu layar -->
           <div class="relative h-44 w-full overflow-hidden p-2 pb-0">
-            <img class="h-full w-full rounded-xl object-cover" :src="service.image" :alt="service.alt" loading="lazy" />
-            <span
-              class="absolute top-4 left-4 rounded-full px-2.5 py-1 text-[9px] font-bold tracking-wider uppercase"
-              :class="service.featured ? 'bg-berry-bright text-white' : 'bg-white/95 text-berry'"
-            >{{ service.featured ? 'Pilihan keluarga' : service.label }}</span>
+            <img v-if="service.image" class="h-full w-full rounded-xl object-cover" :src="service.image" :alt="service.alt" loading="lazy" />
+            <!-- ponytail: URL foto aida-public kedaluwarsa; kosongkan image agar tampil placeholder sampai ada foto asli -->
+            <div v-else class="grid h-full w-full place-items-center rounded-xl bg-blush-deep">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-line" aria-hidden="true">
+                <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/>
+              </svg>
+            </div>
+            <!-- label datar: featured dan biasa sama-sama teks kecil, tanpa kapsul khusus (R-09) -->
+            <span class="absolute top-4 left-4 text-[9px] font-bold tracking-wider uppercase text-berry"
+              >{{ service.label }}</span
+            >
           </div>
 
           <div class="flex flex-1 flex-col p-4">
@@ -48,7 +51,7 @@
                 <strong class="text-base font-bold text-berry">{{ service.price }}</strong>
               </div>
               <button
-                class="w-full inline-flex h-9 items-center justify-center gap-1.5 rounded-full border border-line bg-blush-deep px-3 text-xs font-bold text-berry hover:bg-[#ffe1e7] hover:border-berry-bright transition-colors"
+                class="w-full inline-flex min-h-[44px] items-center justify-center gap-1.5 rounded-full border border-line bg-blush-deep px-3 py-2 text-xs font-bold text-berry hover:bg-[#ffe1e7] hover:border-berry-bright transition-colors"
                 type="button"
                 @click="openWhatsApp(service.message)"
               >
@@ -72,7 +75,7 @@ const services = [
     title: 'Pijat Hamil & Postpartum',
     label: 'Untuk ibu',
     description: 'Sesi relaksasi yang disesuaikan dengan kondisi ibu hamil dan masa pemulihan setelah melahirkan.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA106Qzn2opNWMuY3t_C-A6E9yzU-WhGZEiANwVi92JQBDDxreI5jpMcaDUfTlE_1j1RjZjDlGEJ43ZvIs3VvXcnzfEaf2OYKnvB4p6U-uVZ_sioMUNeheKc47iX8ZM_lL0FYp4mRX12XabJA1B_hY19l1EThi_zyhQloQQ5cE0pfe8whRkVpI7hOUdeTl0YG2suvzDz6M8Kxlh1sd8avBsPplAg8Mwx8FN8eXMTQ4',
+    image: '',
     alt: 'Bidan memberikan perawatan lembut untuk ibu',
     points: ['Anamnesis singkat sebelum sesi', 'Teknik pijat sesuai kebutuhan ibu', 'Sesi privat di rumah'],
     price: 'Rp250.000',
@@ -82,7 +85,7 @@ const services = [
     title: 'Baby Spa & Massage',
     label: 'Untuk bayi',
     description: 'Perawatan lembut untuk membantu bayi merasa nyaman bersama orang yang merawatnya di rumah.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCABo548vwuYxFCKilPaHyhjG2CpsFsJG-BktvWmrvN702Se_HO4MGo586xJwnTq2eML_GEyN1p3c0E5qwo5A1yoh0Y9VWVzsHVgSZTGfVpFi8gCY__Oxj7aDHwVXEXLKmbbpdOndzmJqrND_FhwKWAo9SbwRxrQHebm0a5eyB_ar2k9AIJ8pfu_jzH57xJNBQK9cWDtRmOtfFw3ymX6qatFzSCMzUAtkCILlpk1fM',
+    image: '',
     alt: 'Bidan melakukan perawatan bayi dengan lembut',
     points: ['Observasi kenyamanan bayi', 'Sentuhan lembut sesuai respons bayi', 'Edukasi sederhana untuk orang tua'],
     price: 'Rp180.000',
@@ -92,7 +95,7 @@ const services = [
     title: 'Paket Combo Bunda & Bayi',
     label: 'Sesi keluarga',
     description: 'Satu kunjungan untuk ibu dan bayi, dengan alur perawatan yang dibicarakan sebelum sesi dimulai.',
-    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBnvgiL4kS4UyVwPJTCSGl-Q9LsY3-9JS9MeH5LmBxINDDPQzfUn4oRkx8Ab1IRqlk_qOMYOOWF8b0G1XP6YKoH8J74PK90UxzZ6hGjgOTYu3cPu_kOdbG23deoPQltC2s_60ToenNhz8ryhdZW70xiaVar7jzY0wkH14gJSt12xf2cky_Kj6cbXiy0y-wUXnKZmGdf9yOcXjikLRO9z6BBM9Q8vKUIBf53q51WsSQ',
+    image: '',
     alt: 'Ibu dan bayi menikmati sesi perawatan di rumah',
     points: ['Urutan sesi disepakati bersama', 'Peralatan dibawa ke rumah', 'Cocok untuk waktu keluarga'],
     price: 'Rp395.000',

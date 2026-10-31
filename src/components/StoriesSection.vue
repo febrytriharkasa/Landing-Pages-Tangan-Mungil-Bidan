@@ -1,8 +1,9 @@
 <template>
   <section id="cerita" class="scroll-mt-24 bg-white py-[108px] max-sm:py-[76px]" aria-labelledby="stories-title">
     <div class="mx-auto w-[min(1180px,calc(100%-48px))] max-w-[1180px] max-sm:w-[min(100%-32px,1180px)]">
-      <div class="mb-9 text-center">
-        <h2 id="stories-title" class="mx-auto max-w-[650px] text-[clamp(2rem,4vw,3rem)] font-bold leading-[1.13] tracking-[-0.045em] text-ink">
+      <!-- heading rata kiri: satu-satunya heading seksi yang tidak di tengah (R-05) -->
+      <div class="mb-9 text-left">
+        <h2 id="stories-title" class="text-[clamp(2rem,4vw,2.5rem)] font-bold leading-[1.13] tracking-[-0.02em] text-ink">
           Kata bunda yang sudah merasakan kunjungan kami
         </h2>
       </div>
@@ -12,9 +13,6 @@
           v-for="story in stories"
           :key="story.name"
           class="flex min-h-[250px] flex-col rounded-[24px] border border-line bg-blush p-6 max-sm:p-5"
-          v-motion
-          :initial="{ opacity: 0, y: 16 }"
-          :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 480 } }"
         >
           <div class="flex gap-1 text-berry-bright" aria-label="5 bintang">
             <svg v-for="i in 5" :key="i" viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 .5l2 5h5l-4 3 1.5 5L8 11l-4.5 3L5 9 1 6h5z"/></svg>

@@ -2,12 +2,7 @@
   <section id="contact" class="scroll-mt-24 bg-blush py-[108px] max-sm:py-[76px]" aria-labelledby="contact-title">
     <div class="mx-auto w-[min(1180px,calc(100%-48px))] max-w-[1180px] max-sm:w-[min(100%-32px,1180px)]">
       <div class="grid grid-cols-[minmax(0,1.1fr)_minmax(0,.9fr)] items-start gap-[clamp(40px,6vw,100px)] max-lg:grid-cols-1 max-lg:gap-10">
-        <div
-          class="max-w-[560px]"
-          v-motion
-          :initial="{ opacity: 0, x: -20 }"
-          :visibleOnce="{ opacity: 1, x: 0, transition: { duration: 550 } }"
-        >
+        <div class="max-w-[560px]">
           <h2 id="contact-title" class="max-w-[560px] text-[clamp(2rem,4vw,3rem)] font-bold leading-[1.13] tracking-[-0.045em] text-ink">
             Siap membantu menjawab setiap pertanyaan Anda.
           </h2>
@@ -18,9 +13,6 @@
 
         <div
           class="rounded-[28px] border border-line bg-white p-7 max-sm:p-5"
-          v-motion
-          :initial="{ opacity: 0, x: 20 }"
-          :visibleOnce="{ opacity: 1, x: 0, transition: { duration: 550, delay: 100 } }"
         >
           <h3 class="text-xl font-bold tracking-[-0.03em] text-ink">Mulai konsultasi sekarang</h3>
           <p class="mt-2.5 text-[13px] leading-[1.7] text-muted">
@@ -35,16 +27,10 @@
             <WaIcon :size="22" />
             <span>Chat WhatsApp sekarang</span>
           </a>
-          <p class="mt-3 text-center text-[11px] text-muted">Biasanya dibalas dalam 1-3 jam</p>
         </div>
       </div>
 
-      <div
-        class="mt-12 grid grid-cols-3 gap-0 rounded-[24px] border border-line bg-white py-5 max-lg:grid-cols-1 max-lg:gap-4 max-lg:p-4"
-        v-motion
-        :initial="{ opacity: 0, y: 20 }"
-        :visibleOnce="{ opacity: 1, y: 0, transition: { duration: 520, delay: 150 } }"
-      >
+      <div class="mt-12 grid grid-cols-3 gap-0 rounded-[24px] border border-line bg-white py-5 max-lg:grid-cols-1 max-lg:gap-4 max-lg:p-4">
         <div
           v-for="info in infos"
           :key="info.title"
